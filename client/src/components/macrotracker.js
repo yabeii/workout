@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import 'purecss';
 
 
@@ -40,6 +42,6 @@ class MacroTracker extends Component {
 }
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    // mapStateToProps,
+    // mapDispatchToProps
 )(MacroTracker);
