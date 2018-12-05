@@ -1,11 +1,5 @@
+import { combineReducers } from 'redux';
 
-const initialState = {}
+import exerciseReducer from './exerciseReducer';
 
-
-const rootReducer = (state = initialState, action) => {
-    switch(action.type){
-        default: return state;
-    }
-}
-
-export default rootReducer
+export default combineReducers({ exerciseReducer });
