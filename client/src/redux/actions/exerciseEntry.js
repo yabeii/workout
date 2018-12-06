@@ -1,17 +1,7 @@
+// @ts-check
+
 import { ADD_ENTRY } from '../constants/exerciseData';
 
-let e1 = { exercise: "bench press", set: 1, rep: 5, weight: 100, metric: "lb" };
-let e2 = { exercise: "bench press", set: 1, rep: 5, weight: 100, metric: "lb" };
-
-let example = [
-  { exercise: "bench press", set: 1, rep: 5, weight: 100, metric: "lb" },
-  { exercise: "bench press", set: 1, rep: 5, weight: 100, metric: "kg" },
-  { exercise: "bench press", set: 3, rep: 5, weight: 100, metric: "lb" },
-  { exercise: "bench press", set: 3, rep: 5, weight: 100, metric: "lb" },
-  { exercise: "bench press", set: 1, rep: 5, weight: 100, metric: "kg" },
-  { exercise: "bench press", set: 1, rep: 5, weight: 100, metric: "kg" },
-  { exercise: "bench press", set: 1, rep: 5, weight: 100, metric: "kg" },
-];
 
 // ----- HELPERS -----
 
@@ -50,7 +40,6 @@ const compressAllEntries = entries => {
 
   for (let entry of entries) {
     if (checked.findIndex(e => isRelatedEntry(e, entry)) === -1) {
-      console.log(checked.find(e => isRelatedEntry(e, entry)))
       checked.push(entry);
       compressed.push(combineRelatedEntries(entry, entries));
     }
@@ -92,7 +81,22 @@ const uncompressAllEntries = entries => {
 
 // ---------------------------------
 
+/**
+ * ref: https://github.com/Microsoft/TypeScript/wiki/JSDoc-support-in-JavaScript
+ * 
+ * @typedef {Object} Entry
+ * @property {string} exercise
+ * @property {number} set
+ * @property {number} rep
+ * @property {number} weight
+ * @property {string} metric
+ * 
+ */
 
+/**
+ * @param {Entry[]} workoutEntries 
+ * @param {Date} date 
+ */
 export const addEntry = (workoutEntries, date) => ({
   type: ADD_ENTRY,
   payload: {
