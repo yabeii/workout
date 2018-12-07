@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Navbar from './components/navbar';
-import Exercises from './components/exercises';
+
 import Diet from './components/diet';
 import Profile from './components/profile';
 
 import 'purecss'
-
-import 'purecss';
 
 import ExerciseEntry from './components/exerciseEntry';
 
@@ -19,7 +17,7 @@ class App extends Component {
 
         <Navbar />
         <Switch>
-          <Redirect from='/' to='/exercises' />
+          <Redirect exact from='/' to='/exercises' />
           <Route path='/exercises' component={ExerciseEntry} />
           <Route path='/diet' component={Diet} />
           <Route path='/profile' component={Profile} />
