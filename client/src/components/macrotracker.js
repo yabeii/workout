@@ -11,22 +11,36 @@ class MacroTracker extends Component {
         fat: '',
         calories: '',
         daily_weight: '',
-
     }
+
+    onChange = (e) => {
+        e.preventDefault();
+        this.setState({
+            [e.target.name]: e.target.value,
+            
+        })
+    }
+
+
+
+
+
     render() {
-
-
-
-
 
         return (
             <div>
+                <div>
+                    <h1>Tracked Macros</h1>
+                    
+                </div>
                 <form className="pure-form pure-form-stacked">
                     <fieldset>
-                        <legend>Macro Tracker</legend>
+                        <legend>Enter your macros</legend>
 
                         <label>Carbs</label>
-                        <input placeholder="Carbs" />
+                        <input 
+                        placeholder="Carbs"
+                        />
                         <label>Protein</label>
                         <input placeholder="Protein" />
                         <label>Fat</label>

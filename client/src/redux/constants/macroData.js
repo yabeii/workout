@@ -1,0 +1,1 @@
+export const ADD_MACRO_ENTRY = "ADD_MACRO_ENTRY";
