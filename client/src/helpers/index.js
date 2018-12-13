@@ -49,7 +49,7 @@ export const getEntriesGraph = (exercise, workoutEntries) => {
 }
 
 
-let demo = {
+export const demo = {
   '2018-12-06': [
     {
       compressed: [
@@ -93,7 +93,73 @@ let demo = {
         }
       ]
     }
-  ]
+  ],
+  '2018-12-08': [
+    {
+      compressed: [
+        {
+          exercise: 'bench press',
+          set: 1,
+          rep: 5,
+          weight: 100,
+          metric: 'lb'
+        }
+      ],
+      uncompressed: [
+        {
+          exercise: 'bench press',
+          set: 1,
+          rep: 5,
+          weight: 100,
+          metric: 'lb'
+        }
+      ]
+    }
+  ],
+  '2018-12-09': [
+    {
+      compressed: [
+        {
+          exercise: 'bench press',
+          set: 1,
+          rep: 5,
+          weight: 103,
+          metric: 'lb'
+        }
+      ],
+      uncompressed: [
+        {
+          exercise: 'bench press',
+          set: 1,
+          rep: 5,
+          weight: 103,
+          metric: 'lb'
+        }
+      ]
+    }
+  ],
+  '2018-12-10': [
+    {
+      compressed: [
+        {
+          exercise: 'bench press',
+          set: 1,
+          rep: 5,
+          weight: 110,
+          metric: 'lb'
+        }
+      ],
+      uncompressed: [
+        {
+          exercise: 'bench press',
+          set: 1,
+          rep: 5,
+          weight: 110,
+          metric: 'lb'
+        }
+      ]
+    }
+  ],
 }
 
 // DEMO
