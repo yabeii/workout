@@ -55,3 +55,4 @@ LineChart.propTypes = {
 };
 
 export default LineChart;
+

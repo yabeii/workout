@@ -11,6 +11,11 @@
  * @property {number} weight
  * @property {string} metric
  * 
+ * @typedef {Object} SearchExercise
+ * @property {string} exercise
+ * @property {number | string} set
+ * @property {number | string} rep
+ * 
  * @typedef {Object} DayEntry
  * @property {Exercise[]} compressed
  * @property {Exercise[]} uncompressed
@@ -30,9 +35,12 @@ const isSameExercise = (exer1, exer2) =>
   && exer1.rep === exer2.rep;
 
 /**
- * @param {Exercise} exercise 
+ * @param {SearchExercise} exercise 
  * @param {WorkoutEntry} workoutEntries 
  * @returns {ChartData[]}
+ * 
+ * We use index 0 to find compressed because we don't have 
+ * an opinion on multi-workouts during 1 day currently
  */
 export const getEntriesGraph = (exercise, workoutEntries) => {
   let chartData = [];
@@ -125,6 +133,13 @@ export const demo = {
           rep: 5,
           weight: 103,
           metric: 'lb'
+        },
+        {
+          exercise: 'squat',
+          set: 3,
+          rep: 8,
+          weight: 405,
+          metric: 'lb'
         }
       ],
       uncompressed: [
@@ -133,6 +148,27 @@ export const demo = {
           set: 1,
           rep: 5,
           weight: 103,
+          metric: 'lb'
+        },
+        {
+          exercise: 'squat',
+          set: 1,
+          rep: 8,
+          weight: 405,
+          metric: 'lb'
+        },
+        {
+          exercise: 'squat',
+          set: 1,
+          rep: 8,
+          weight: 405,
+          metric: 'lb'
+        },
+        {
+          exercise: 'squat',
+          set: 1,
+          rep: 8,
+          weight: 405,
           metric: 'lb'
         }
       ]

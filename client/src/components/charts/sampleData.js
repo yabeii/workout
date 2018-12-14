@@ -5,9 +5,7 @@ import { getEntriesGraph, demo } from '../../helpers';
 let entries = getEntriesGraph({
   exercise: 'bench press',
   set: 1,
-  rep: 5,
-  weight: 100,
-  metric: 'lb'
+  rep: 5
 }, demo);
 
 export const sampleLineDataWithWeight = {

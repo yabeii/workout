@@ -7,9 +7,9 @@ import '../../styles/button.css';
 const ExerciseRow = ({ onChange, value, removeRow }) => (
   <fieldset>
     <select value={value.exercise} name="exercise" onChange={onChange}>
-      <option defaultChecked value="bench press">Bench Press</option>
-      <option value="squat">Squat</option>
-      <option value="deadlift">Deadlift</option>
+      <option defaultChecked value="bench press">bench press</option>
+      <option value="squat">squat</option>
+      <option value="deadlift">deadlift</option>
     </select>
 
     <input required type="number" placeholder="Set" name="set" value={value.set} onChange={onChange} />

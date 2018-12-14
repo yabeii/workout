@@ -1,1 +1,2 @@
 export const ADD_ENTRY = "ADD_ENTRY";
+export const SEARCH_EXERCISE = "SEARCH_EXERCISE";

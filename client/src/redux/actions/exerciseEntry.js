@@ -105,3 +105,5 @@ export const addEntry = (workoutEntries, date) => ({
     uncompressed: uncompressAllEntries(workoutEntries)
   }
 })
+
+
